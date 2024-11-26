@@ -1,0 +1,22 @@
+import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+option=webdriver.ChromeOptions()
+driver = webdriver.Chrome(options=option)
+driver.get("file:///F:/CURSO-GESTION_PRUEBAS/TIPOS%20PRUEBAS/PRUEBAS%20DEL%20SISTEMA/SITIOFICTICIO/index.html#")
+btn = driver.find_element(By.LINK_TEXT,"Add Product")
+btn.click()
+codigo = driver.find_element(By.ID,"product-code")
+codigo.send_keys("codigo")
+nombre = driver.find_element(By.ID,"product-name")
+nombre.send_keys("Producto")
+precio = driver.find_element(By.ID,"product-price")
+precio.send_keys("10")
+costo = driver.find_element(By.ID,"product-cost")
+costo.send_keys("15")
+stock = driver.find_element(By.ID,"product-stock")
+stock.send_keys("100")
+boton =driver.find_element(By.CLASS_NAME,"btn-primary")
+boton.click()
+time.sleep(5)
+driver.quit()

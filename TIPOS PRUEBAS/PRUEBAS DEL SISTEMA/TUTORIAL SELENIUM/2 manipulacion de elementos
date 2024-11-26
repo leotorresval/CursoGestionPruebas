@@ -1,0 +1,16 @@
+2. Interacción con Elementos
+2.1. Localización de elementos
+Selenium permite localizar elementos de varias maneras:
+
+Por ID:
+element = driver.find_element("id", "nombre_del_id")
+
+Por clase:
+element = driver.find_element("class name", "nombre_de_la_clase")
+
+Por nombre:
+element = driver.find_element("name", "nombre_del_campo")
+
+Por etiquetas CSS o XPath:
+element = driver.find_element("css selector", "selector_css")
+element = driver.find_element("xpath", "//etiqueta[@atributo='valor']")
